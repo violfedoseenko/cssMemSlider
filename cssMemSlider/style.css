@@ -1,6 +1,98 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color: DarkSlateBlue ;
+    font-size: 62.5%;
+}
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+}
+.container .slider_wrapper {
+    display: grid;
+    row-gap: 2rem;
+
+}
+.container .slider_wrapper .slides {
+    max-height: 70vh;
+    width: 50%;
+    justify-self: center;
+    overflow: hidden;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+    grid-column-start: 1;   
+    grid-column-end: 4; 
+
+}
+.container .slider_wrapper .slides .slides_content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 0;
+    width: 500%;
+    transition: 0.5s;
+}
+
+.container .slider_wrapper .slides .slides_content .mem {
+    max-width: 98%;
+    max-height: 70vh;
+    align-self: center;
+    justify-self: center;
+}
+.container .slider_wrapper .subtitles {
+    grid-row-start: 5; 
+    grid-row-end: 6; 
+    grid-column-start: 1;   
+    grid-column-end: 3; 
+
+}
+.container .slider_wrapper .navigation {
+    height: 1rem;
+    justify-content: end;
+    display: flex;
+    grid-row-start: 5; 
+    grid-row-end: 6; 
+    grid-column-start: 3;   
+    grid-column-end: 4; 
+}
+
+.container .slider_wrapper input {
+    display: none;
+}
+.container .slider_wrapper .navigation .navBar {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.container .slider_wrapper .navigation .navBar:hover > .btn {
+    /* border: 0.1rem solid white;
+    background-color: transparent; */
+    opacity: 1;
+
+  }
+.container .slider_wrapper .navigation .navBar .btn {
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #fff;
+    opacity: 0.5;
+    border: none;
+    border-radius: 100%;
+}
+.container .slider_wrapper .subtitles .subtitles_content {
+    
+    max-height: 2.5rem;
+    overflow: hidden;
+}
+.container .slider_wrapper .subtitles .subtitles_content .sub {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.5;
 }
