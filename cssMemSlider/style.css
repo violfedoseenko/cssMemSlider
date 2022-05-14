@@ -22,7 +22,6 @@ body {
 }
 .container .slider_wrapper .slides {
     max-height: 70vh;
-    /* width: 50%; */
     justify-self: center;
     overflow: hidden;
     grid-row-start: 1; 
@@ -73,7 +72,6 @@ body {
     margin: 0.5rem;
     padding: 0.3rem;
     cursor: pointer;
-    transition: all 0.5s ease;
 }
 .container .slider_wrapper .navigation .navBar:hover > .btn {
     opacity: 1;
@@ -90,6 +88,7 @@ body {
 }
 .container .slider_wrapper .subtitles {
     overflow: hidden;
+    width: 100%;
 }
 .container .slider_wrapper .subtitles .subtitles_content {
     max-height: 2.5rem;
@@ -163,4 +162,27 @@ body {
 #R5:checked ~ .navigation >.navBar >.btn5  {
     border: 0.1rem solid white;
     background-color: transparent;
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 20rem;
+    }
+    .container .slider_wrapper .navigation {
+        grid-row-start: 5; 
+        grid-row-end: 6; 
+        grid-column-start: 1;   
+        grid-column-end: 4;
+        justify-content: center;
+    }
+    .container .slider_wrapper .subtitles {
+        grid-row-start: 6; 
+        grid-row-end: 7; 
+        grid-column-start: 1;   
+        grid-column-end: 4;
+    }
+    .container .slider_wrapper .subtitles .subtitles_content .sub {
+        margin: 0 auto;
+    }
+
 }
