@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 5vh 0;
+    overflow: hidden;
 }
 .container .slider_wrapper {
     display: grid;
@@ -21,7 +22,7 @@ body {
 }
 .container .slider_wrapper .slides {
     max-height: 70vh;
-    width: 50%;
+    /* width: 50%; */
     justify-self: center;
     overflow: hidden;
     grid-row-start: 1; 
@@ -33,18 +34,19 @@ body {
 .container .slider_wrapper .slides .slides_content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-left: 0;
     width: 500%;
     transition: 0.5s;
 }
 
 .container .slider_wrapper .slides .slides_content .mem {
-    max-width: 98%;
+    max-width: 100%;
     max-height: 70vh;
     align-self: center;
     justify-self: center;
 }
 .container .slider_wrapper .subtitles {
+    width: 500%;
+    overflow: hidden;
     grid-row-start: 5; 
     grid-row-end: 6; 
     grid-column-start: 1;   
@@ -59,6 +61,7 @@ body {
     grid-row-end: 6; 
     grid-column-start: 3;   
     grid-column-end: 4; 
+    z-index: 2;
 }
 
 .container .slider_wrapper input {
@@ -73,11 +76,10 @@ body {
     transition: all 0.5s ease;
 }
 .container .slider_wrapper .navigation .navBar:hover > .btn {
-    /* border: 0.1rem solid white;
-    background-color: transparent; */
     opacity: 1;
 
   }
+
 .container .slider_wrapper .navigation .navBar .btn {
     width: 0.7rem;
     height: 0.7rem;
@@ -86,13 +88,79 @@ body {
     border: none;
     border-radius: 100%;
 }
+.container .slider_wrapper .subtitles {
+    overflow: hidden;
+}
 .container .slider_wrapper .subtitles .subtitles_content {
-    
     max-height: 2.5rem;
     overflow: hidden;
+    width: 500%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transition: 0.5s;
 }
 .container .slider_wrapper .subtitles .subtitles_content .sub {
     font-size: 2rem;
     color: white;
     opacity: 0.5;
+}
+
+
+#R1:checked ~ .slides >.slides_content  {
+    margin-left: 0;
+}
+#R1:checked ~ .subtitles >.subtitles_content  {
+    margin-left: 0;
+}
+#R1:checked ~ .navigation >.navBar >.btn1  {
+    border: 0.1rem solid white;
+    background-color: transparent;
+}
+
+
+#R2:checked ~ .slides >.slides_content  {
+    margin-left: -100%;
+}
+#R2:checked ~ .subtitles >.subtitles_content  {
+    margin-left: -100%;
+}
+#R2:checked ~ .navigation >.navBar >.btn2  {
+    border: 0.1rem solid white;
+    background-color: transparent;
+}
+
+
+#R3:checked ~ .slides >.slides_content  {
+    margin-left: -200%;
+}
+#R3:checked ~ .subtitles >.subtitles_content  {
+    margin-left: -200%;
+}
+#R3:checked ~ .navigation >.navBar >.btn3  {
+    border: 0.1rem solid white;
+    background-color: transparent;
+}
+
+
+#R4:checked ~ .slides >.slides_content  {
+    margin-left: -300%;
+}
+#R4:checked ~ .subtitles >.subtitles_content  {
+    margin-left: -300%;
+}
+#R4:checked ~ .navigation >.navBar >.btn4  {
+    border: 0.1rem solid white;
+    background-color: transparent;
+}
+
+
+#R5:checked ~ .slides >.slides_content  {
+    margin-left: -400%;
+}
+#R5:checked ~ .subtitles >.subtitles_content  {
+    margin-left: -400%;
+}
+#R5:checked ~ .navigation >.navBar >.btn5  {
+    border: 0.1rem solid white;
+    background-color: transparent;
 }
