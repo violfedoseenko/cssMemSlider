@@ -61,6 +61,7 @@ body {
     grid-column-start: 3;   
     grid-column-end: 4; 
     z-index: 2;
+    margin-right: 2rem;
 }
 
 .container .slider_wrapper input {
@@ -102,6 +103,7 @@ body {
     font-size: 2rem;
     color: white;
     opacity: 0.5;
+    margin-left: 2rem;
 }
 
 
@@ -174,12 +176,14 @@ body {
         grid-column-start: 1;   
         grid-column-end: 4;
         justify-content: center;
+        margin-right: 0;
     }
     .container .slider_wrapper .subtitles {
         grid-row-start: 6; 
         grid-row-end: 7; 
         grid-column-start: 1;   
         grid-column-end: 4;
+        margin-left: 0;
     }
     .container .slider_wrapper .subtitles .subtitles_content .sub {
         margin: 0 auto;
